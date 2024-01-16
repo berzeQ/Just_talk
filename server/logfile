@@ -1,0 +1,136 @@
+2024-01-12 15:09:47.464 +0545 [12848] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2024-01-12 15:09:47.472 +0545 [12848] LOG:  could not bind IPv6 address "::1": Permission denied
+2024-01-12 15:09:47.473 +0545 [12848] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2024-01-12 15:09:47.473 +0545 [12848] WARNING:  could not create listen socket for "localhost"
+2024-01-12 15:09:47.473 +0545 [12848] FATAL:  could not create any TCP/IP sockets
+2024-01-12 15:09:47.476 +0545 [12848] LOG:  database system is shut down
+2024-01-12 15:19:46.220 +0545 [15400] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2024-01-12 15:19:46.229 +0545 [15400] LOG:  could not bind IPv6 address "::1": Permission denied
+2024-01-12 15:19:46.230 +0545 [15400] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2024-01-12 15:19:46.230 +0545 [15400] WARNING:  could not create listen socket for "localhost"
+2024-01-12 15:19:46.231 +0545 [15400] FATAL:  could not create any TCP/IP sockets
+2024-01-12 15:19:46.236 +0545 [15400] LOG:  database system is shut down
+2024-01-12 15:42:21.929 +0545 [15156] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2024-01-12 15:42:21.942 +0545 [15156] LOG:  listening on IPv6 address "::1", port 5432
+2024-01-12 15:42:21.943 +0545 [15156] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-01-12 15:42:22.064 +0545 [15000] LOG:  database system was shut down at 2024-01-12 15:05:10 +0545
+2024-01-12 15:42:22.108 +0545 [15156] LOG:  database system is ready to accept connections
+2024-01-12 15:47:22.065 +0545 [13576] LOG:  checkpoint starting: time
+2024-01-12 15:49:14.474 +0545 [13576] LOG:  checkpoint complete: wrote 1006 buffers (6.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=111.735 s, sync=0.657 s, total=112.410 s; sync files=309, longest=0.008 s, average=0.003 s; distance=4774 kB, estimate=4774 kB; lsn=0/1A17A28, redo lsn=0/1A179F0
+2024-01-12 21:42:23.023 +0545 [13576] LOG:  checkpoint starting: time
+2024-01-12 21:42:29.637 +0545 [13576] LOG:  checkpoint complete: wrote 57 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.422 s, sync=0.166 s, total=6.618 s; sync files=43, longest=0.032 s, average=0.004 s; distance=176 kB, estimate=4314 kB; lsn=0/1A43D98, redo lsn=0/1A43D60
+2024-01-12 21:53:21.761 +0545 [9036] FATAL:  database "template0" is not currently accepting connections
+2024-01-12 22:55:58.896 +0545 [9176] ERROR:  syntax error at or near "create" at character 13
+2024-01-12 22:55:58.896 +0545 [9176] STATEMENT:  show tables
+	create database api
+	select * from postgres
+	CREATE TABLE users (
+	  ID SERIAL PRIMARY KEY,
+	  name VARCHAR(30),
+	  email VARCHAR(30)
+	);
+2024-01-12 22:57:23.902 +0545 [13576] LOG:  checkpoint starting: time
+2024-01-12 22:57:29.049 +0545 [13576] LOG:  checkpoint complete: wrote 46 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.959 s, sync=0.126 s, total=5.148 s; sync files=39, longest=0.017 s, average=0.004 s; distance=152 kB, estimate=3898 kB; lsn=0/1A69FB0, redo lsn=0/1A69F78
+2024-01-12 23:02:23.060 +0545 [13576] LOG:  checkpoint starting: time
+2024-01-12 23:02:24.614 +0545 [13576] LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.442 s, sync=0.076 s, total=1.554 s; sync files=9, longest=0.025 s, average=0.009 s; distance=8 kB, estimate=3509 kB; lsn=0/1A6C2B0, redo lsn=0/1A6C278
+2024-01-12 23:09:10.226 +0545 [8016] FATAL:  role "postgres" does not exist
+2024-01-12 23:09:28.171 +0545 [9504] FATAL:  role "postgres" does not exist
+2024-01-12 23:09:33.131 +0545 [1836] FATAL:  role "postgres" does not exist
+2024-01-12 23:09:34.417 +0545 [15412] FATAL:  role "postgres" does not exist
+2024-01-12 23:15:14.669 +0545 [16344] FATAL:  role "postgres" does not exist
+2024-01-12 23:17:38.360 +0545 [13860] FATAL:  role "postgres" does not exist
+2024-01-12 23:17:39.676 +0545 [11868] FATAL:  role "postgres" does not exist
+2024-01-12 23:17:40.864 +0545 [13132] FATAL:  role "postgres" does not exist
+2024-01-12 23:18:43.659 +0545 [9176] ERROR:  syntax error at or near "SELECT" at character 21
+2024-01-12 23:18:43.659 +0545 [9176] STATEMENT:  select * from users
+	SELECT * FROM users
+	select postgres
+	SELECT rolname FROM pg_roles;
+2024-01-12 23:19:24.962 +0545 [16884] FATAL:  role "postgres" does not exist
+2024-01-12 23:21:23.098 +0545 [13652] ERROR:  syntax error at or near "SELECT" at character 21
+2024-01-12 23:21:23.098 +0545 [13652] STATEMENT:  select * from users
+	SELECT column_name, data_type
+	FROM information_schema.columns
+	WHERE table_name = 'users';
+2024-01-12 23:23:06.084 +0545 [13652] ERROR:  syntax error at or near "SELECT" at character 34
+2024-01-12 23:23:06.084 +0545 [13652] STATEMENT:  select * from users where id =1 
+	SELECT * FROM users where id=1;
+2024-01-12 23:24:11.261 +0545 [13652] ERROR:  syntax error at or near "cd" at character 1
+2024-01-12 23:24:11.261 +0545 [13652] STATEMENT:  cd
+	ls
+	SELECT * FROM users;
+2024-01-12 23:25:48.844 +0545 [16276] FATAL:  database "template0" is not currently accepting connections
+2024-01-12 23:26:08.573 +0545 [8440] FATAL:  database "template0" is not currently accepting connections
+2024-01-12 23:26:10.394 +0545 [14760] FATAL:  database "template0" is not currently accepting connections
+2024-01-12 23:26:11.443 +0545 [15232] FATAL:  database "template0" is not currently accepting connections
+2024-01-12 23:26:12.390 +0545 [17216] FATAL:  database "template0" is not currently accepting connections
+2024-01-12 23:27:23.659 +0545 [13576] LOG:  checkpoint starting: time
+2024-01-12 23:27:24.818 +0545 [13576] LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.102 s, sync=0.029 s, total=1.160 s; sync files=6, longest=0.011 s, average=0.005 s; distance=20 kB, estimate=3160 kB; lsn=0/1A71370, redo lsn=0/1A71338
+2024-01-12 23:29:42.360 +0545 [8388] FATAL:  role "postgres" does not exist
+2024-01-12 23:30:19.599 +0545 [16016] FATAL:  role "postgres" does not exist
+2024-01-12 23:31:34.982 +0545 [11228] FATAL:  role "postgres" does not exist
+2024-01-12 23:31:37.132 +0545 [256] FATAL:  role "postgres" does not exist
+2024-01-12 23:31:40.528 +0545 [1172] FATAL:  database "namik" does not exist
+2024-01-12 23:31:43.621 +0545 [15660] FATAL:  role "postgres" does not exist
+2024-01-12 23:32:16.778 +0545 [17132] FATAL:  database "namik" does not exist
+2024-01-12 23:32:52.579 +0545 [17000] FATAL:  database "postgress" does not exist
+2024-01-12 23:46:20.612 +0545 [8884] FATAL:  role "postgres" does not exist
+2024-01-12 23:50:41.962 +0545 [15568] FATAL:  role "postgres" does not exist
+2024-01-12 23:50:43.715 +0545 [2356] FATAL:  role "postgres" does not exist
+2024-01-12 23:50:44.660 +0545 [16296] FATAL:  role "postgres" does not exist
+2024-01-12 23:57:52.939 +0545 [13328] FATAL:  role "postgres" does not exist
+2024-01-12 23:57:56.103 +0545 [8256] FATAL:  role "postgres" does not exist
+2024-01-13 00:02:11.061 +0545 [14232] FATAL:  role "postgres" does not exist
+2024-01-13 00:02:12.180 +0545 [10468] FATAL:  role "postgres" does not exist
+2024-01-13 00:02:12.613 +0545 [12504] FATAL:  role "postgres" does not exist
+2024-01-13 00:02:12.953 +0545 [16332] FATAL:  role "postgres" does not exist
+2024-01-13 00:02:13.164 +0545 [14720] FATAL:  role "postgres" does not exist
+2024-01-13 00:02:13.322 +0545 [16452] FATAL:  role "postgres" does not exist
+2024-01-13 00:02:20.597 +0545 [16684] FATAL:  role "postgres" does not exist
+2024-01-13 00:02:23.967 +0545 [13576] LOG:  checkpoint starting: time
+2024-01-13 00:02:24.220 +0545 [13576] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.226 s, sync=0.006 s, total=0.261 s; sync files=3, longest=0.004 s, average=0.002 s; distance=2 kB, estimate=2844 kB; lsn=0/1A71DF8, redo lsn=0/1A71DC0
+2024-01-13 00:02:28.824 +0545 [1512] FATAL:  role "postgres" does not exist
+2024-01-13 00:02:38.063 +0545 [8596] FATAL:  role "postgres" does not exist
+2024-01-13 00:03:58.226 +0545 [13580] FATAL:  database "namik" does not exist
+2024-01-13 00:04:23.954 +0545 [15760] FATAL:  role "postgres" does not exist
+2024-01-13 00:04:29.194 +0545 [8184] FATAL:  role "app" does not exist
+2024-01-13 00:06:52.717 +0545 [376] FATAL:  role "postgres" does not exist
+2024-01-13 00:07:06.094 +0545 [16068] FATAL:  role "postgres" does not exist
+2024-01-13 00:07:16.000 +0545 [15500] FATAL:  role "postgres" does not exist
+2024-01-13 00:07:50.620 +0545 [15096] FATAL:  role "postgres" does not exist
+2024-01-13 00:11:17.598 +0545 [15324] FATAL:  role "postgres" does not exist
+2024-01-13 00:11:20.722 +0545 [13696] FATAL:  role "postgres" does not exist
+2024-01-13 00:11:24.253 +0545 [15832] FATAL:  role "postgres" does not exist
+2024-01-13 00:11:33.114 +0545 [1872] FATAL:  role "postgres" does not exist
+2024-01-13 00:12:23.251 +0545 [13576] LOG:  checkpoint starting: time
+2024-01-13 00:12:25.520 +0545 [13576] LOG:  checkpoint complete: wrote 18 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.961 s, sync=0.050 s, total=2.270 s; sync files=9, longest=0.013 s, average=0.006 s; distance=30 kB, estimate=2563 kB; lsn=0/1A799D8, redo lsn=0/1A799A0
+2024-01-13 00:16:24.633 +0545 [13648] FATAL:  role "postgres" does not exist
+2024-01-13 00:16:31.979 +0545 [16220] FATAL:  database "template0" is not currently accepting connections
+2024-01-13 00:22:21.037 +0545 [9024] FATAL:  role "postgres" does not exist
+2024-01-13 00:23:06.826 +0545 [5084] FATAL:  role "postgres" does not exist
+2024-01-13 00:23:08.928 +0545 [4980] FATAL:  role "postgres" does not exist
+2024-01-13 00:23:13.609 +0545 [4812] FATAL:  role "postgres" does not exist
+2024-01-13 00:23:17.506 +0545 [4748] FATAL:  role "postgres" does not exist
+2024-01-13 00:23:20.834 +0545 [16996] FATAL:  role "postgres" does not exist
+2024-01-13 00:23:25.029 +0545 [3832] FATAL:  role "postgres" does not exist
+2024-01-13 00:23:29.579 +0545 [17152] FATAL:  role "postgres" does not exist
+2024-01-13 00:23:31.208 +0545 [2320] FATAL:  role "postgres" does not exist
+2024-01-13 00:23:43.531 +0545 [15444] FATAL:  role "postgres" does not exist
+2024-01-13 01:19:31.568 +0545 [8712] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2024-01-13 01:19:31.573 +0545 [16380] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2024-01-13 01:19:31.577 +0545 [10752] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2024-01-14 23:20:54.613 +0545 [12136] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2024-01-14 23:20:54.621 +0545 [12136] LOG:  could not bind IPv6 address "::1": Permission denied
+2024-01-14 23:20:54.621 +0545 [12136] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2024-01-14 23:20:54.621 +0545 [12136] WARNING:  could not create listen socket for "localhost"
+2024-01-14 23:20:54.621 +0545 [12136] FATAL:  could not create any TCP/IP sockets
+2024-01-14 23:20:54.625 +0545 [12136] LOG:  database system is shut down
+2024-01-14 23:49:41.308 +0545 [14240] LOG:  starting PostgreSQL 16.1, compiled by Visual C++ build 1937, 64-bit
+2024-01-14 23:49:41.318 +0545 [14240] LOG:  could not bind IPv6 address "::1": Permission denied
+2024-01-14 23:49:41.318 +0545 [14240] LOG:  could not bind IPv4 address "127.0.0.1": Permission denied
+2024-01-14 23:49:41.319 +0545 [14240] WARNING:  could not create listen socket for "localhost"
+2024-01-14 23:49:41.319 +0545 [14240] FATAL:  could not create any TCP/IP sockets
+2024-01-14 23:49:41.325 +0545 [14240] LOG:  database system is shut down
