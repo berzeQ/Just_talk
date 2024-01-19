@@ -27,11 +27,10 @@ const initializeDatabase = async () => {
         id SERIAL PRIMARY KEY,
         username VARCHAR(255) UNIQUE NOT NULL,
         password VARCHAR(255) NOT NULL,
-        email VARCHAR(255) NOT NULL,
-        phone_number BIGINT,
-
-      )
-    `);
+        email VARCHAR(255) UNIQUE NOT NULL,
+        phone_number BIGINT
+        )
+         `);
 
     console.log("Database initialized successfully");
   } catch (error) {
