@@ -11,7 +11,7 @@ import { AcmeLogo } from "./logo.js";
 
 export default function App() {
   return (
-    <Navbar className=" dark text-white pt-5 pb-5 bg-transparent  ">
+    <Navbar className=" dark text-white py-3 bg-transparent  ">
       <NavbarBrand>
         <AcmeLogo className="text-5xl" />
         <p className="font-bold text-4xl bg-gradient-to-r from-cyan-500 via-cyan-700 to-cyan-900 text-transparent bg-clip-text">

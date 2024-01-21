@@ -18,7 +18,7 @@ export default function Home() {
   const [selected, setSelected] = useState("login");
 
   return (
-    <div className="bg-gradient-to-r from-black via-gray-700 to-black h-screen flex flex-col gap-14">
+    <div className="bg-gradient-to-r from-black via-gray-700 to-black h-full  flex flex-col gap-14 ">
       <Navbar />
 
       <div className="flex flex-col w-2/5 h-4/5 bg-gray-900 self-center justify-evenly">

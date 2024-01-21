@@ -7,5 +7,6 @@ const router = express.Router();
 router.get("/books", userController.getAllData);
 router.post("/books", userController.inputData);
 router.post("/register", userController.userRegister);
+router.post("/login", userController.userLogin);
 
 module.exports = router;

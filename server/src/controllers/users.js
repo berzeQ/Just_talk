@@ -60,4 +60,41 @@ const userRegister = async (req, res) => {
   }
 };
 
-module.exports = { registerNewUser, getAllData, inputData, userRegister };
+const userLogin = async (req, res) => {
+  console.log("login in ");
+  try {
+    const result = await connection.query(
+      "SELECT * FROM users where username = $1 LIMIT 1",
+      [req.body.username]
+    );
+
+    if (result.length > 0) {
+      console.log(result);
+      const verifyUser = await bcrypt.compare(
+        req.body?.password,
+        result[0]?.password
+      );
+      if (verifyUser) {
+        console.log("user found");
+        return res.status(200).json({ msg: "User logged in successfully" });
+      } else {
+        console.log("wrong");
+        return res.status(403).json({ msg: "Invalid credentials " });
+      }
+    } else {
+      console.log("no");
+      return res.status(404).json({ msg: "User doesn't exist " });
+    }
+  } catch (err) {
+    console.log(err);
+    return res.status(404).json({ msg: "User doesn't exist " });
+  }
+};
+
+module.exports = {
+  registerNewUser,
+  getAllData,
+  inputData,
+  userRegister,
+  userLogin,
+};
