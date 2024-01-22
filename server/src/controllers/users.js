@@ -2,6 +2,8 @@ const connection = require("../db/connection");
 const express = require("express");
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
+const jwt = require("jsonwebtoken");
+
 const registerNewUser = (req, res) => {
   res.json({ msg: "user registerd successfully" });
 };
@@ -76,7 +78,23 @@ const userLogin = async (req, res) => {
       );
       if (verifyUser) {
         console.log("user found");
-        return res.status(200).json({ msg: "User logged in successfully" });
+        const token = jwt.sign(
+          { email: req.body.email },
+          process.env.SECRET_KEY,
+          {
+            expiresIn: "1h",
+          }
+        );
+        console.log(token);
+        return res
+          .cookie("myCookie", token, {
+            maxAge: 3600000,
+            httpOnly: false,
+            path: "/",
+            domain: "localhost",
+          })
+          .status(200)
+          .json({ msg: "User logged in successfully" });
       } else {
         console.log("wrong");
         return res.status(403).json({ msg: "Invalid credentials " });

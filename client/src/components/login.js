@@ -20,9 +20,11 @@ const LoginSchema = Yup.object().shape({
 const Login = (props) => {
   const userLogin = async (values) => {
     try {
-      const res = await axios.post("http://localhost:5000/login", values);
+      const res = await axios.post("http://localhost:5000/login", values, {
+        withCredentials: true,
+      });
       if (res) {
-        console.log(res, res.data),
+        console.log(res, res.data, res.headers),
           props.setSelected("login"),
           toast(
             res.status == 200

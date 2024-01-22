@@ -4,7 +4,12 @@ require("dotenv").config();
 const { sendEmail } = require("./nodemailer/index");
 const cors = require("cors");
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "http://localhost:3001"], // Replace with your actual client origin
+    credentials: true,
+  })
+);
 
 const port = process.env.PORT;
 const userRoute = require("./routes/users");
