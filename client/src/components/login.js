@@ -40,6 +40,7 @@ const Login = (props) => {
               },
             }
           );
+        // props.setToken(document.cookie.split("=")[1]);
       }
     } catch (err) {
       console.log(err, err.response.data.msg);
