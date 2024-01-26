@@ -15,6 +15,7 @@ import Login from "../components/login";
 import Register from "../components/register";
 import { useSelector } from "react-redux";
 import { useCookies } from "react-cookie";
+import MainBody from "../components/mainbody/page";
 
 export default function Home() {
   const { username } = useSelector((state) => state.user);
@@ -30,10 +31,7 @@ export default function Home() {
       <Navbar />
 
       {cookies.myCookie ? (
-        <div className="flex flex-col w-2/5 h-4/5 bg-gray-900 self-center justify-evenly text-white">
-          <h1>dog world</h1>
-          <h1>{username}</h1>
-        </div>
+        <MainBody />
       ) : (
         <div className="flex flex-col w-2/5 h-4/5 bg-gray-900 self-center justify-evenly">
           <Card className=" dark max-w-full w-full h-full">
